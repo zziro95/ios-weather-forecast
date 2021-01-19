@@ -145,9 +145,9 @@
 			isa = PBXGroup;
 			children = (
 				E223151025B6AC71007AD2A5 /* CurrentWeather.swift */,
+				E223152325B6C63B007AD2A5 /* FiveDayWeather.swift */,
 				E223153725B6E72F007AD2A5 /* Coord.swift */,
 				E223152825B6E629007AD2A5 /* Weather.swift */,
-				E223152325B6C63B007AD2A5 /* FiveDayWeather.swift */,
 				E223152D25B6E69D007AD2A5 /* Wind.swift */,
 				E223153225B6E6A5007AD2A5 /* Clouds.swift */,
 			);
