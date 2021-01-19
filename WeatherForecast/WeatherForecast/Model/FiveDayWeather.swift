@@ -14,7 +14,7 @@ struct FiveDayWeather: Codable {
         let visibility: Int
         let pop: Double
         let rain: Rain
-        let sys: Sys
+        let sys: FiveDayWeatherSys
         let dtTxt: String
         
         enum CodingKeys: String, CodingKey {
@@ -72,7 +72,7 @@ struct FiveDayWeather: Codable {
             }
         }
         
-        struct Sys: Codable {
+        struct FiveDayWeatherSys: Codable {
             let pod: String
         }
     }

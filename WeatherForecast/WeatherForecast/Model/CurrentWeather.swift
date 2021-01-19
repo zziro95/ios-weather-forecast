@@ -8,7 +8,7 @@ struct CurrentWeather: Codable {
     let wind: Wind
     let clouds: Clouds
     let dt: Int
-    let sys: Sys
+    let sys: CurrentWeatherSys
     let timezone: Int
     let id: Int
     let name: String
@@ -50,7 +50,7 @@ struct CurrentWeather: Codable {
         }
     }
     
-    struct Sys: Codable {
+    struct CurrentWeatherSys: Codable {
         let type: Int
         let id: Int
         let message: Double
