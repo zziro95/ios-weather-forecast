@@ -4,7 +4,7 @@ struct CurrentWeather: Codable {
     let coord: Coord
     let weather: [Weather]
     let base: String
-    let main: Main
+    let main: CurrentWeatherMain
     let wind: Wind
     let clouds: Clouds
     let dt: Int
@@ -14,7 +14,7 @@ struct CurrentWeather: Codable {
     let name: String
     let cod: Int
     
-    struct Main: Codable {
+    struct CurrentWeatherMain: Codable {
         let temp: Double
         let feelsLike: Double
         let tempMin: Double

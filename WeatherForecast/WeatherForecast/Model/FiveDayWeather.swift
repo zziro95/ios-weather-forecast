@@ -8,7 +8,7 @@ struct FiveDayWeather: Codable {
     let city: City
     
     struct List: Codable {
-        let main: Main
+        let main: FiveDayWeatherMain
         let weather: [Weather]
         let clouds: Clouds
         let visibility: Int
@@ -22,7 +22,7 @@ struct FiveDayWeather: Codable {
             case dtTxt = "dt_txt"
         }
         
-        struct Main: Codable {
+        struct FiveDayWeatherMain: Codable {
             let temp: Double
             let feelsLike: Double
             let tempMin: Double
