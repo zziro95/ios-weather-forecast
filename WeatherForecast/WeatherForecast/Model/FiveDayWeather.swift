@@ -1,7 +1,7 @@
 import Foundation
 
 struct FiveDayWeather: Codable {
-    let cod: Int
+    let cod: String
     let message: Int
     let cnt: Int
     let list: [List]
