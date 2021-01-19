@@ -33,6 +33,26 @@ struct CurrentWeather: Codable {
         let tempMax: Double
         let pressure: Int
         let humidity: Int
+       
+        var tempConvertedToCelsius: Double {
+            let convertedValue = (self.temp - 273)
+            return round(convertedValue * 10) / 10
+        }
+        
+        var feelsLikeConvertedToCelsius: Double {
+            let convertedValue = (self.feelsLike - 273)
+            return round(convertedValue * 10) / 10
+        }
+        
+        var tempMinConvertedToCelsius: Double {
+            let convertedValue = (self.tempMin - 273)
+            return round(convertedValue * 10) / 10
+        }
+        
+        var tempMaxConvertedToCelsius: Double {
+            let convertedValue = (self.tempMax - 273)
+            return round(convertedValue * 10) / 10
+        }
         
         enum CodingKeys: String, CodingKey {
             case temp, pressure, humidity
