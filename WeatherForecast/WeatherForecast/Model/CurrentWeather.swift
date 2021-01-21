@@ -20,38 +20,39 @@ struct CurrentWeather: Decodable {
     }
     
     struct CurrentWeatherMain: Decodable {
-        let temp: Double
+        let temperature: Double
         let feelsLike: Double
-        let tempMin: Double
-        let tempMax: Double
+        let minTemperature: Double
+        let maxTemperature: Double
         let pressure: Int
         let humidity: Int
        
-        var tempConvertedToCelsius: Double {
-            let convertedValue = (self.temp - 273)
+        var temperatureInCelsius: Double {
+            let convertedValue = (self.temperature - 273)
             return round(convertedValue * 10) / 10
         }
         
-        var feelsLikeConvertedToCelsius: Double {
+        var feelsLikeInCelsius: Double {
             let convertedValue = (self.feelsLike - 273)
             return round(convertedValue * 10) / 10
         }
         
-        var tempMinConvertedToCelsius: Double {
-            let convertedValue = (self.tempMin - 273)
+        var minTemperatureInCelsius: Double {
+            let convertedValue = (self.minTemperature - 273)
             return round(convertedValue * 10) / 10
         }
         
-        var tempMaxConvertedToCelsius: Double {
-            let convertedValue = (self.tempMax - 273)
+        var maxTemperatureInCelsius: Double {
+            let convertedValue = (self.maxTemperature - 273)
             return round(convertedValue * 10) / 10
         }
         
         enum CodingKeys: String, CodingKey {
-            case temp, pressure, humidity
+            case temperature = "temp"
+            case pressure, humidity
             case feelsLike = "feels_like"
-            case tempMin = "temp_min"
-            case tempMax = "temp_max"
+            case minTemperature = "temp_min"
+            case maxTemperature = "temp_max"
         }
     }
     
