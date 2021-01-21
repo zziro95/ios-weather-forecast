@@ -25,7 +25,7 @@ class ViewController: UIViewController {
 
         print(fiveDaysWeatherData.cod)
         print(fiveDaysWeatherData.city.name)
-        print(fiveDaysWeatherData.lists[0].main.temperature)
+        print(fiveDaysWeatherData.lists[0].main.temperatureInCelsius)
     }
     
     func decodeCurrentWeatherJSONFile() {

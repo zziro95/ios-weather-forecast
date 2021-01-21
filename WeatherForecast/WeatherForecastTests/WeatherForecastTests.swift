@@ -41,29 +41,6 @@ class WeatherForecastTests: XCTestCase {
             return
         }
         
-        var expectedValue: Double = 282.55
-        XCTAssertEqual(data.main.temperature, expectedValue)
-        XCTAssertNotEqual(data.main.temperatureInCelsius, expectedValue)
-        expectedValue = 281.86
-        XCTAssertEqual(data.main.feelsLike, expectedValue)
-        expectedValue = 280.37
-        XCTAssertEqual(data.main.minTemperature, expectedValue)
-        expectedValue = 284.26
-        XCTAssertEqual(data.main.maxTemperature, expectedValue)
-        
-        expectedValue = 9.5
-        XCTAssertNotEqual(data.main.temperatureInCelsius, expectedValue)
-        expectedValue = 9.6
-        XCTAssertEqual(data.main.temperatureInCelsius, expectedValue)
-        expectedValue = 8.9
-        XCTAssertEqual(data.main.feelsLikeInCelsius, expectedValue)
-        expectedValue = 7.9
-        XCTAssertNotEqual(data.main.minTemperatureInCelsius, expectedValue)
-        expectedValue = 7.4
-        XCTAssertEqual(data.main.minTemperatureInCelsius, expectedValue)
-        expectedValue = 11.3
-        XCTAssertEqual(data.main.maxTemperatureInCelsius, expectedValue)
-        
         let expectedString = "Mountain View"
         XCTAssertEqual(data.cityName, expectedString)
     }
@@ -102,7 +79,6 @@ class WeatherForecastTests: XCTestCase {
         
         let testData: String = "300"
         XCTAssertNotEqual(data.cod, testData)
-        XCTAssertEqual(data.lists[0].main.temperature, 293.55)
         XCTAssertEqual(data.lists[0].coordinatedUniversalTime, 1596564000)
         XCTAssertEqual(data.lists[0].weathers[0].iconID, "10d")
         XCTAssertEqual(data.lists[0].rain.threeHour, 0.53)
