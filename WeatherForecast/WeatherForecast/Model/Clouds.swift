@@ -1,5 +1,9 @@
 import Foundation
 
 struct Clouds: Decodable {
-    let all: Int
+    let allOver: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case allOver = "all"
+    }
 }
