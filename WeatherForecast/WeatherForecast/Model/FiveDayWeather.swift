@@ -80,10 +80,16 @@ struct FiveDayWeather: Decodable {
     struct City: Decodable {
         let id: Int
         let name: String
-        let coord: Coord
-        let country: String
+        let locationCoordinate: LocationCoordinate
+        let countryCode: String
         let timezone: Int
         let sunrise: Int
         let sunset: Int
+        
+        enum CodingKeys: String, CodingKey {
+            case id, name, timezone, sunrise, sunset
+            case locationCoordinate = "coord"
+            case countryCode = "country"
+        }
     }
 }
