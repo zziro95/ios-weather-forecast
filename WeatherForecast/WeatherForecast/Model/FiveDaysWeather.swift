@@ -13,7 +13,7 @@ struct FiveDaysWeather: Decodable {
     }
     
     struct List: Decodable {
-        let coordinatedUniversalTime: Date
+        let coordinatedUniversalTime: Int
         let main: Main
         let weathers: [Weather]
         let clouds: Clouds

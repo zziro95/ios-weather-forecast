@@ -9,7 +9,7 @@ struct CurrentWeather: Decodable {
     let clouds: Clouds
     let rain: Rain?
     let snow: Snow?
-    let coordinatedUniversalTime: Date
+    let coordinatedUniversalTime: Int
     let sys: Sys
     let timezone: Int
     let cityID: Int
@@ -128,8 +128,8 @@ struct CurrentWeather: Decodable {
         let id: Int
         let message: Double
         let countryCode: String
-        let sunriseTime: Date
-        let sunsetTime: Date
+        let sunriseTime: Int
+        let sunsetTime: Int
         
         enum CodingKeys: String, CodingKey {
             case type, id, message

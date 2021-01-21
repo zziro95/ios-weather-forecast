@@ -1,9 +1,3 @@
-//
-//  WeatherForecastTests - WeatherForecastTests.swift
-//  Created by yagom. 
-//  Copyright © yagom. All rights reserved.
-// 
-
 import XCTest
 @testable import WeatherForecast
 
@@ -107,9 +101,11 @@ class WeatherForecastTests: XCTestCase {
         }
         
         let testData: String = "300"
-        XCTAssertEqual(data.cod, testData)
-//        var expectedValue: Double = 293.55
-//        XCTAssertEqual(data.list[0].main.temp, 3)
-//        XCTAssertEqual(data.list[1].main.temp, 4)
+        XCTAssertNotEqual(data.cod, testData)
+        XCTAssertEqual(data.lists[0].main.temperature, 293.55)
+        XCTAssertEqual(data.lists[0].coordinatedUniversalTime, 1596564000)
+        XCTAssertEqual(data.lists[0].weathers[0].iconID, "10d")
+        XCTAssertEqual(data.lists[0].rain.threeHour, 0.53)
+        XCTAssertEqual(data.lists[0].snow?.threeHour, nil)
     }
 }
