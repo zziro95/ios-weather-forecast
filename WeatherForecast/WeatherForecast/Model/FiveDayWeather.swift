@@ -11,14 +11,14 @@ struct FiveDayWeather: Decodable {
         let main: FiveDayWeatherMain
         let weather: [Weather]
         let clouds: Clouds
-        let visibility: Int
+        let wind: Wind
         let pop: Double
         let rain: Rain
         let sys: FiveDayWeatherSys
         let dtTxt: String
         
         enum CodingKeys: String, CodingKey {
-            case main, weather, clouds, visibility, pop, rain, sys
+            case main, weather, clouds, wind, pop, rain, sys
             case dtTxt = "dt_txt"
         }
         
