@@ -49,10 +49,10 @@ struct CurrentWeather: Decodable {
     }
     
     struct Main: Decodable {
-        let temperature: Double
-        let feelsLike: Double
-        let minTemperature: Double
-        let maxTemperature: Double
+        private let temperature: Double
+        private let feelsLike: Double
+        private let minTemperature: Double
+        private let maxTemperature: Double
         let pressure: Int
         let humidity: Int
        
