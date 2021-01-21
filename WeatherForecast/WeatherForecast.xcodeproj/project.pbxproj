@@ -20,7 +20,7 @@
 		E223152925B6E629007AD2A5 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = E223152825B6E629007AD2A5 /* Weather.swift */; };
 		E223152E25B6E69D007AD2A5 /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = E223152D25B6E69D007AD2A5 /* Wind.swift */; };
 		E223153325B6E6A5007AD2A5 /* Clouds.swift in Sources */ = {isa = PBXBuildFile; fileRef = E223153225B6E6A5007AD2A5 /* Clouds.swift */; };
-		E223153825B6E72F007AD2A5 /* Coord.swift in Sources */ = {isa = PBXBuildFile; fileRef = E223153725B6E72F007AD2A5 /* Coord.swift */; };
+		E223153825B6E72F007AD2A5 /* LocationCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E223153725B6E72F007AD2A5 /* LocationCoordinate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +60,7 @@
 		E223152825B6E629007AD2A5 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		E223152D25B6E69D007AD2A5 /* Wind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wind.swift; sourceTree = "<group>"; };
 		E223153225B6E6A5007AD2A5 /* Clouds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clouds.swift; sourceTree = "<group>"; };
-		E223153725B6E72F007AD2A5 /* Coord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coord.swift; sourceTree = "<group>"; };
+		E223153725B6E72F007AD2A5 /* LocationCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCoordinate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +146,7 @@
 			children = (
 				E223151025B6AC71007AD2A5 /* CurrentWeather.swift */,
 				E223152325B6C63B007AD2A5 /* FiveDayWeather.swift */,
-				E223153725B6E72F007AD2A5 /* Coord.swift */,
+				E223153725B6E72F007AD2A5 /* LocationCoordinate.swift */,
 				E223152825B6E629007AD2A5 /* Weather.swift */,
 				E223152D25B6E69D007AD2A5 /* Wind.swift */,
 				E223153225B6E6A5007AD2A5 /* Clouds.swift */,
@@ -287,7 +287,7 @@
 				C79C8CF825ADDDF200EEE3F1 /* ViewController.swift in Sources */,
 				E223153325B6E6A5007AD2A5 /* Clouds.swift in Sources */,
 				C79C8CF425ADDDF200EEE3F1 /* AppDelegate.swift in Sources */,
-				E223153825B6E72F007AD2A5 /* Coord.swift in Sources */,
+				E223153825B6E72F007AD2A5 /* LocationCoordinate.swift in Sources */,
 				E223152E25B6E69D007AD2A5 /* Wind.swift in Sources */,
 				E223151125B6AC71007AD2A5 /* CurrentWeather.swift in Sources */,
 				C79C8CF625ADDDF200EEE3F1 /* SceneDelegate.swift in Sources */,
