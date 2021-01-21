@@ -2,7 +2,7 @@ import Foundation
 
 struct CurrentWeather: Decodable {
     let locationCoordinate: LocationCoordinate
-    let weather: [Weather]
+    let weathers: [Weather]
     let base: String
     let main: Main
     let wind: Wind
@@ -18,7 +18,8 @@ struct CurrentWeather: Decodable {
     
     enum CodingKeys: String, CodingKey {
         case locationCoordinate = "coord"
-        case weather, base, main, wind, clouds, rain, snow, sys, timezone, cod
+        case weathers = "weather"
+        case base, main, wind, clouds, rain, snow, sys, timezone, cod
         case coordinatedUniversalTime = "dt"
         case cityID = "id"
         case cityName = "name"

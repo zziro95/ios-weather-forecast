@@ -1,16 +1,21 @@
 import Foundation
 
-struct FiveDayWeather: Decodable {
+struct FiveDaysWeather: Decodable {
     let cod: String
     let message: Int
     let cnt: Int
-    let list: [List]
+    let lists: [List]
     let city: City
+    
+    enum CodingKeys: String, CodingKey {
+        case cod, message, cnt, city
+        case lists = "list"
+    }
     
     struct List: Decodable {
         let coordinatedUniversalTime: Date
         let main: Main
-        let weather: [Weather]
+        let weathers: [Weather]
         let clouds: Clouds
         let wind: Wind
         let pop: Double
@@ -21,7 +26,8 @@ struct FiveDayWeather: Decodable {
         
         enum CodingKeys: String, CodingKey {
             case coordinatedUniversalTime = "dt"
-            case main, weather, clouds, wind, pop, rain, snow, sys
+            case main, clouds, wind, pop, rain, snow, sys
+            case weathers = "weather"
             case dtTxt = "dt_txt"
         }
         

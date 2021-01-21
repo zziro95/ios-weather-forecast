@@ -6,8 +6,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let CurrentWeatherDataAssetName = "CurrentWeathertestData"
         
-        decodeJSONFile()
+        decodeJSONFile(name: CurrentWeatherDataAssetName)
         
         guard let data = currentWeatherData else {
             return
@@ -18,9 +19,9 @@ class ViewController: UIViewController {
         print(data.rain?.threeHour)
     }
     
-    func decodeJSONFile() {
+    func decodeJSONFile(name: String) {
         let jsonDecoder: JSONDecoder = JSONDecoder()
-        let dataAssetName: String = "CurrentWeathertestData"
+        let dataAssetName: String = name
         guard let dataAsset: NSDataAsset = NSDataAsset.init(name: dataAssetName) else {
             return
         }

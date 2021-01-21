@@ -75,15 +75,15 @@ class WeatherForecastTests: XCTestCase {
     }
     
     func testFiveDayWeatherData() {
-        var fiveDayWeatherData: FiveDayWeather?
+        var fiveDaysWeatherData: FiveDaysWeather?
         let jsonDecoder: JSONDecoder = JSONDecoder()
-        let dataAssetName: String = "FiveDayWeathertestData"
+        let dataAssetName: String = "FiveDaysWeathertestData"
         guard let dataAsset: NSDataAsset = NSDataAsset.init(name: dataAssetName) else {
             return
         }
         
         do {
-            fiveDayWeatherData = try jsonDecoder.decode(FiveDayWeather.self, from: dataAsset.data)
+            fiveDaysWeatherData = try jsonDecoder.decode(FiveDaysWeather.self, from: dataAsset.data)
         } catch DecodingError.dataCorrupted(let context) {
             print("데이터가 손상되었거나 유효하지 않습니다.")
             print(context.codingPath, context.debugDescription, context.underlyingError ?? "" , separator: "\n")
@@ -100,7 +100,7 @@ class WeatherForecastTests: XCTestCase {
             print("그외 에러가 발생했습니다.")
         }
         
-        guard let data = fiveDayWeatherData else {
+        guard let data = fiveDaysWeatherData else {
             print("**************")
             print("데이터 할당 안됨")
             return

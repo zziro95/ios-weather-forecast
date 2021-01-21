@@ -16,7 +16,7 @@
 		C79C8D0B25ADDDF400EEE3F1 /* WeatherForecastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79C8D0A25ADDDF400EEE3F1 /* WeatherForecastTests.swift */; };
 		C79C8D1625ADDDF400EEE3F1 /* WeatherForecastUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79C8D1525ADDDF400EEE3F1 /* WeatherForecastUITests.swift */; };
 		E223151125B6AC71007AD2A5 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = E223151025B6AC71007AD2A5 /* CurrentWeather.swift */; };
-		E223152425B6C63B007AD2A5 /* FiveDayWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = E223152325B6C63B007AD2A5 /* FiveDayWeather.swift */; };
+		E223152425B6C63B007AD2A5 /* FiveDaysWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = E223152325B6C63B007AD2A5 /* FiveDaysWeather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,7 @@
 		C79C8D1525ADDDF400EEE3F1 /* WeatherForecastUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecastUITests.swift; sourceTree = "<group>"; };
 		C79C8D1725ADDDF400EEE3F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E223151025B6AC71007AD2A5 /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
-		E223152325B6C63B007AD2A5 /* FiveDayWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveDayWeather.swift; sourceTree = "<group>"; };
+		E223152325B6C63B007AD2A5 /* FiveDaysWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveDaysWeather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				E223151025B6AC71007AD2A5 /* CurrentWeather.swift */,
-				E223152325B6C63B007AD2A5 /* FiveDayWeather.swift */,
+				E223152325B6C63B007AD2A5 /* FiveDaysWeather.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -276,7 +276,7 @@
 				C79C8CF425ADDDF200EEE3F1 /* AppDelegate.swift in Sources */,
 				E223151125B6AC71007AD2A5 /* CurrentWeather.swift in Sources */,
 				C79C8CF625ADDDF200EEE3F1 /* SceneDelegate.swift in Sources */,
-				E223152425B6C63B007AD2A5 /* FiveDayWeather.swift in Sources */,
+				E223152425B6C63B007AD2A5 /* FiveDaysWeather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
