@@ -9,22 +9,33 @@ struct FiveDayWeather: Decodable {
     
     struct List: Decodable {
         let coordinatedUniversalTime: Date
-        let main: FiveDayWeatherMain
+        let main: Main
         let weather: [Weather]
         let clouds: Clouds
         let wind: Wind
         let pop: Double
         let rain: Rain
-        let sys: FiveDayWeatherSys
+        let snow: Snow
+        let sys: Sys
         let dtTxt: String
         
         enum CodingKeys: String, CodingKey {
             case coordinatedUniversalTime = "dt"
-            case main, weather, clouds, wind, pop, rain, sys
+            case main, weather, clouds, wind, pop, rain, snow, sys
             case dtTxt = "dt_txt"
         }
         
-        struct FiveDayWeatherMain: Decodable {
+        struct LocationCoordinate: Decodable {
+            let longitude: Double
+            let latitude: Double
+            
+            enum CodingKeys: String, CodingKey {
+                case longitude = "lon"
+                case latitude = "lat"
+            }
+        }
+        
+        struct Main: Decodable {
             let temperature: Double
             let feelsLike: Double
             let minTemperature: Double
@@ -67,6 +78,37 @@ struct FiveDayWeather: Decodable {
             }
         }
         
+        struct Weather: Decodable {
+            let stateID: Int
+            let main: String
+            let description: String
+            let iconID: String
+            
+            enum CodingKeys: String, CodingKey {
+                case stateID = "id"
+                case main, description
+                case iconID = "icon"
+            }
+        }
+        
+        struct Clouds: Decodable {
+            let allOver: Int
+            
+            enum CodingKeys: String, CodingKey {
+                case allOver = "all"
+            }
+        }
+        
+        struct Wind: Decodable {
+            let speed: Double
+            let degree: Int
+            
+            enum CodingKeys: String, CodingKey {
+                case speed
+                case degree = "deg"
+            }
+        }
+        
         struct Rain: Decodable {
             let threeHour: Double
             
@@ -75,7 +117,15 @@ struct FiveDayWeather: Decodable {
             }
         }
         
-        struct FiveDayWeatherSys: Decodable {
+        struct Snow: Decodable {
+            let threeHour: Double
+            
+            enum CodingKeys: String, CodingKey {
+                case threeHour = "3h"
+            }
+        }
+        
+        struct Sys: Decodable {
             let pod: String
         }
     }
