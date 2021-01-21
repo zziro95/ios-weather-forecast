@@ -20,7 +20,7 @@ struct FiveDaysWeather: Decodable {
         let wind: Wind
         let pop: Double
         let rain: Rain
-        let snow: Snow
+        let snow: Snow?
         let sys: Sys
         let dtTxt: String
         
@@ -29,16 +29,6 @@ struct FiveDaysWeather: Decodable {
             case main, clouds, wind, pop, rain, snow, sys
             case weathers = "weather"
             case dtTxt = "dt_txt"
-        }
-        
-        struct LocationCoordinate: Decodable {
-            let longitude: Double
-            let latitude: Double
-            
-            enum CodingKeys: String, CodingKey {
-                case longitude = "lon"
-                case latitude = "lat"
-            }
         }
         
         struct Main: Decodable {
