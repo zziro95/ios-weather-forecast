@@ -32,7 +32,7 @@ class WeatherForecastTests: XCTestCase {
             print(context.codingPath, context.debugDescription, context.underlyingError ?? "" , separator: "\n")
         } catch DecodingError.keyNotFound(let codingkey, let context) {
             print("주어진 키를 찾을수 없습니다.")
-            print(codingkey.intValue ?? Optional(nil)! , codingkey.stringValue , context.codingPath, context.debugDescription, context.underlyingError ?? "" , separator: "\n")
+            print(codingkey.intValue ?? 0 , codingkey.stringValue , context.codingPath, context.debugDescription, context.underlyingError ?? "" , separator: "\n")
         } catch DecodingError.typeMismatch(let type, let context) {
             print("주어진 타입과 일치하지 않습니다.")
             print(type.self , context.codingPath, context.debugDescription, context.underlyingError ?? "" , separator: "\n")
@@ -48,30 +48,30 @@ class WeatherForecastTests: XCTestCase {
         }
         
         var expectedValue: Double = 282.55
-        XCTAssertEqual(data.main.temp, expectedValue)
-        XCTAssertNotEqual(data.main.tempConvertedToCelsius, expectedValue)
+        XCTAssertEqual(data.main.temperature, expectedValue)
+        XCTAssertNotEqual(data.main.temperatureInCelsius, expectedValue)
         expectedValue = 281.86
         XCTAssertEqual(data.main.feelsLike, expectedValue)
         expectedValue = 280.37
-        XCTAssertEqual(data.main.tempMin, expectedValue)
+        XCTAssertEqual(data.main.minTemperature, expectedValue)
         expectedValue = 284.26
-        XCTAssertEqual(data.main.tempMax, expectedValue)
+        XCTAssertEqual(data.main.maxTemperature, expectedValue)
         
         expectedValue = 9.5
-        XCTAssertNotEqual(data.main.tempConvertedToCelsius, expectedValue)
+        XCTAssertNotEqual(data.main.temperatureInCelsius, expectedValue)
         expectedValue = 9.6
-        XCTAssertEqual(data.main.tempConvertedToCelsius, expectedValue)
+        XCTAssertEqual(data.main.temperatureInCelsius, expectedValue)
         expectedValue = 8.9
-        XCTAssertEqual(data.main.feelsLikeConvertedToCelsius, expectedValue)
+        XCTAssertEqual(data.main.feelsLikeInCelsius, expectedValue)
         expectedValue = 7.9
-        XCTAssertNotEqual(data.main.tempMinConvertedToCelsius, expectedValue)
+        XCTAssertNotEqual(data.main.minTemperatureInCelsius, expectedValue)
         expectedValue = 7.4
-        XCTAssertEqual(data.main.tempMinConvertedToCelsius, expectedValue)
+        XCTAssertEqual(data.main.minTemperatureInCelsius, expectedValue)
         expectedValue = 11.3
-        XCTAssertEqual(data.main.tempMaxConvertedToCelsius, expectedValue)
+        XCTAssertEqual(data.main.maxTemperatureInCelsius, expectedValue)
         
         let expectedString = "Mountain View"
-        XCTAssertEqual(data.name, expectedString)
+        XCTAssertEqual(data.cityName, expectedString)
     }
     
     func testFiveDayWeatherData() {

@@ -7,8 +7,8 @@ struct CurrentWeather: Decodable {
     let main: Main
     let wind: Wind
     let clouds: Clouds
-    let rain: Rain
-    let snow: Snow
+    let rain: Rain?
+    let snow: Snow?
     let coordinatedUniversalTime: Date
     let sys: Sys
     let timezone: Int
