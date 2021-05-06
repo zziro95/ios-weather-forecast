@@ -14,13 +14,12 @@
 - Codable
 - Decodable
 - CodingKey
-...
 
 <br>
 
 ---
 ## 트러블 슈팅
-1. Deployment Target
+### 1. Deployment Target<br>
 **문제 상황**<br>
 fork 해온 저장소를 clone하여 프로젝트를 진행하려했을 때 `AppDelegate`와 `SceneDelegate`에 아래와 같은 오류가 쏟아져 나왔다.<br>
  - `UIScene' is only available in iOS 13.0 or newer`
@@ -50,14 +49,14 @@ fork 해온 저장소를 clone하여 프로젝트를 진행하려했을 때 `App
 
  ---
 ## 고민한 점
-- 모델 설계
+- 모델 설계 <br>
  구조 - `CurrentWeather(현재 날씨`) `FiveDaysWeather(5일 예보)` 타입 생성 과정에서 공통으로 필요한 타입,<br>
  Main, Rain, Snow의 타입이 CurrentWeather과 FiveDayWeather 타입에 공통적으로 등장하지만 API를 통해 받게되는 JSON데이터에서는 전달 받는 데이터의 차이가 있었습니다.(Rain으로 예를 들자면 현재날씨는 1h,3h를 전달받고 5일일기예보는 3h만 전달받습니다.)<br>
 필수데이터와 모델설계. 다 가져와야하는지 필요한 것만 가져오면되는지<br>
 그에따른 타입에 옵셔널 설정<br>
 <br>
 
-- Decodable과 CodingKey
+- Decodable과 CodingKey <br>
 처음에는 `Codable`을 채택하였지만 이 프로젝트에서는 Encoding을 할 경우가 없을 것으로 예상되기 때문에 `Decodable`을 채택하는 방향으로 수정하였습니다. <br>
 [Decodable](https://developer.apple.com/documentation/swift/decodable)과 [CodingKey](https://developer.apple.com/documentation/swift/codingkey)를 공부하다 보니 애플 공식문서에 init을 필수로 구현해야 한다는 것을 알게되었습니다. <br>
 그러나 프로젝트에서 JSON 데이터를 다룰때 init을 구현하지 않아도 별다른 오류가 발생하지 않아 의문이 생겼었습니다. <br>
