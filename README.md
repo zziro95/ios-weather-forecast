@@ -20,17 +20,17 @@
 ## 트러블 슈팅
 ### 1. Deployment Target
 - 문제 상황   
-    - fork 해온 저장소를 clone 하여 프로젝트를 진행하려 했을 때 `AppDelegate`와 `SceneDelegate`에 아래와 같은 오류가 쏟아져 나왔다.   
+    - fork 해온 저장소를 clone 하여 프로젝트를 진행하려 했을 때 `AppDelegate`와 `SceneDelegate`에 아래와 같은 오류가 쏟아져 나왔습니다.   
     - `UIScene' is only available in iOS 13.0 or newer`
     - `UISceneConfiguration' is only available in iOS 13.0 or newer`
     - `UISceneSession' is only available in iOS 13.0 or newer`
     - `ConnectionOptions' is only available in iOS 13.0 or newer`
     
 - 고민 과정   
-    - 공통적인 키워드는 `UIScene`와 `iOS 13.0`임을 확인할 수 있었고,  오류 메세지의 내용은 키워드들이 `iOS 13.0`이상에서만 사용할 수 있다는 것이었다.   
-    - `UIScene`, `AppDelegate`와 `SceneDelegate`에 대해 알아보았고, `AppDelegate`와 `SceneDelegate`로 분리된 게 13.0 버전 기준임을 알게 되었다.   
+    - 공통적인 키워드는 `UIScene`와 `iOS 13.0`임을 확인할 수 있었고,  오류 메세지의 내용은 키워드들이 `iOS 13.0`이상에서만 사용할 수 있다는 것이었습니다.   
+    - `UIScene`, `AppDelegate`와 `SceneDelegate`에 대해 알아보았고, `AppDelegate`와 `SceneDelegate`로 분리된 게 13.0 버전 기준임을 알게 되었습니다.   
    
-    - 현재 프로젝트 버전은 12.0 이고 `UIScene`과 관련된 클래스와 메서드들은 13.0 버전 이상에서만 사용할 수 있기 때문에 해결방안으로는 아래 두 가지 방법이 있음을 확인하였다.   
+    - 현재 프로젝트 버전은 12.0 이고 `UIScene`과 관련된 클래스와 메서드들은 13.0 버전 이상에서만 사용할 수 있기 때문에 해결방안으로는 아래 두 가지 방법이 있음을 확인하였습니다.   
    
 ```swift
 1. 프로젝트의 Deployment Target을 13.0 이상으로 변경해 준다.
@@ -38,10 +38,10 @@
 ```
    
 - 해결 방안   
-    - 2번 방법을 선택하였고 iOS 13.0이상 버전에서도 사용할 수 있도록 `AppDelegate`와 `SceneDelegate`에 `@available(iOS 13.0, *)` 코드를 추가해 해결하였다.   
+    - 2번 방법을 선택하였고 iOS 13.0이상 버전에서도 사용할 수 있도록 `AppDelegate`와 `SceneDelegate`에 `@available(iOS 13.0, *)` 코드를 추가해 해결하였습니다.   
     - [문제 해결 커밋](https://github.com/zziro95/ios-weather-forecast/commit/98c9aac2c2a74ae7c3c82913abd878418ac720ff)   
    
-    - 1번 방법으로 해결하기 위해서는 `TARGETS iOS Deployment Target`을 바꿔줘야 한다는 것도 알게 되어 추가로 [정리](https://github.com/zziro95/zzipository/blob/main/iOS/iOS%20Deployment%20Target.md)해 보았다.   
+    - 1번 방법으로 해결하기 위해서는 `TARGETS iOS Deployment Target`을 바꿔줘야 한다는 것도 알게 되어 추가로 [정리](https://github.com/zziro95/zzipository/blob/main/iOS/iOS%20Deployment%20Target.md)해 보았습니다.   
    
 ### CodingKey
 - 문제 상황
