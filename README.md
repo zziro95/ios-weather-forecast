@@ -43,7 +43,7 @@
    
     - 1번 방법으로 해결하기 위해서는 `TARGETS iOS Deployment Target`을 바꿔줘야 한다는 것도 알게 되어 추가로 [정리](https://github.com/zziro95/zzipository/blob/main/iOS/iOS%20Deployment%20Target.md)해 보았습니다.   
    
-### CodingKey
+### 2. CodingKey
 - 문제 상황
     - 처음 CodingKey를 적용시켰을 경우 API 문서에서 받아오는 JSON 데이터의 키값이 `snake_case`로 되어있기 때문에 `camel Case`로 변경해 주는 용도로 만 사용하였습니다.
     - 그러다 보니 프로퍼티의 네이밍이 [API Design Guidelines](https://swift.org/documentation/api-design-guidelines/)에서 지양하는 약어를 사용하게 되고 명확하지 않은 네이밍이 되었습니다.
@@ -94,5 +94,4 @@
 - 결론
     - 질문의 답으로 [Swift-Evolution](https://github.com/apple/swift-evolution/blob/main/proposals/0166-swift-archival-serialization.md) 문서를 참고해보길 권하셨고, 살펴본 결과 `Codable`, `Encodable`, `Decodable`, `CodingKey` 프로토콜을 채택한 타입의 경우 사용자의 정의가 필요하지 않은 경우라면 `init` 혹은 `Instance Property`들이 컴파일러에 의해 자동으로 생성된다는 것을 확인하였습니다.   
     - 따라서 필수 구현인 init을 구현하지 않아도 오류가 나지 않음을 알아낼 수 있었습니다.    
-   
----
+    
