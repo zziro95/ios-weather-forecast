@@ -1,4 +1,7 @@
-# 날씨정보 프로젝트
+# :white_sun_rain_cloud: 날씨정보 프로젝트 :white_sun_rain_cloud:
+프로젝트 기간: 2021.01.18 ~ 2021.01.24   
+개인 프로젝트 :man_technologist:   
+---
 ## 구현된 기능
 - 현재 날씨 API와 5일 예보 API를 통해 전달받은 데이터를 활용할 수 있도록 모델 타입 구현
 - 각 타입 JSON 샘플 데이터를 이용한 테스트
@@ -94,4 +97,3 @@
 - 결론
     - 질문의 답으로 [Swift-Evolution](https://github.com/apple/swift-evolution/blob/main/proposals/0166-swift-archival-serialization.md) 문서를 참고해보길 권하셨고, 살펴본 결과 `Codable`, `Encodable`, `Decodable`, `CodingKey` 프로토콜을 채택한 타입의 경우 사용자의 정의가 필요하지 않은 경우라면 `init` 혹은 `Instance Property`들이 컴파일러에 의해 자동으로 생성된다는 것을 확인하였습니다.   
     - 따라서 필수 구현인 init을 구현하지 않아도 오류가 나지 않음을 알아낼 수 있었습니다.    
-    
