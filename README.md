@@ -95,5 +95,5 @@
     - 어떤 키워드로 접근, 공부해야 할 지에대한 판단이 오랜 시간이 지남에도 서지 않아 프로젝트 리뷰어 `민디`에게 도움을 요청하였습니다.   
    
 - 결론
-    - 질문의 답으로 [Swift-Evolution](https://github.com/apple/swift-evolution/blob/main/proposals/0166-swift-archival-serialization.md) 문서를 참고해보길 권하셨고, 살펴본 결과 `Codable`, `Encodable`, `Decodable`, `CodingKey` 프로토콜을 채택한 타입의 경우 사용자의 정의가 필요하지 않은 경우라면 `init` 혹은 `Instance Property`들이 컴파일러에 의해 자동으로 생성된다는 것을 확인하였습니다.   
+    - 질문의 답으로 [Swift-Evolution](https://github.com/apple/swift-evolution/blob/main/proposals/0166-swift-archival-serialization.md) 문서를 참고해보길 권하셨고, 살펴본 결과 `Decodable`, `CodingKey` 프로토콜을 채택한 타입의 경우 사용자의 정의가 필요하지 않은 경우라면 `init` 혹은 `Instance Property`들이 컴파일러에 의해 자동으로 생성된다는 것을 확인하였습니다.   
     - 따라서 필수 구현인 init을 구현하지 않아도 오류가 나지 않음을 알아낼 수 있었습니다.    
