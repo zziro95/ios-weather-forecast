@@ -8,18 +8,6 @@
 - [모델 타입 구조](https://github.com/zziro95/ios-weather-forecast/blob/1-zziro/images/ModelUML.png)
    
 ---
-## 학습 키워드
-- iOS Deployment Target
-- available
-- JSON
-- HTTP
-- Codable
-- Decodable
-- CodingKey
-- Core Location
-- XCTest
-   
----
 ## 트러블 슈팅
 ### 1. Deployment Target
 - 문제 상황   
