@@ -8,7 +8,7 @@
 - [모델 타입 구조](https://github.com/zziro95/ios-weather-forecast/blob/1-zziro/images/ModelUML.png)
    
 ---
-## 트러블 슈팅
+## 🎯 트러블 슈팅
 ### 1. Deployment Target
 - 문제 상황   
     - fork 해온 저장소를 clone 하여 프로젝트를 진행하려 했을 때 `AppDelegate`와 `SceneDelegate`에 아래와 같은 오류가 쏟아져 나왔습니다.   
@@ -43,7 +43,7 @@
     - [문제 해결 커밋](https://github.com/lina0322/ios-weather-forecast/commit/3f25e66e77f17fcadef7fab6d03ad8a0d2e65bbf)중 하나 입니다.
  
  ---
-## 고민한 점
+## 💡 고민한 점
 ### 타입
 - 문제 상황
     - `CurrentWeather(현재 날씨)`, `FiveDaysWeather(5일 예보)` 타입 생성 과정에서 공통으로 필요한 타입, Main, Rain, Snow 등의 타입이 CurrentWeather과 FiveDayWeather 타입에 공통적으로 등장하지만 API를 통해 받게 되는 JSON 데이터에서는 **전달 받는 데이터의 차이**가 있었습니다.   
